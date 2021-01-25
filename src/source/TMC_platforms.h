@@ -28,6 +28,18 @@
   #define writeSCK_H digitalWrite(sck_pin, HIGH)
   #define writeSCK_L digitalWrite(sck_pin, LOW)
   #define readMISO digitalRead(miso_pin)
+#elif defined(ESP_PLATFORM)
+  #define digitalWrite(...)
+  #define digitalRead(...)
+  #define pinMode(...)
+  #define OUTPUT
+  #define HIGH
+  #define LOW
+  #define writeMOSI_H
+  #define writeMOSI_L
+  #define writeSCK_H
+  #define writeSCK_L
+  #define readMISO
 #else // DUE:116kHz
   #define writeMOSI_H digitalWrite(mosi_pin, HIGH)
   #define writeMOSI_L digitalWrite(mosi_pin, LOW)

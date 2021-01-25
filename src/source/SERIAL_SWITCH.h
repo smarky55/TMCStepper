@@ -5,6 +5,8 @@
 	#include "source/rpi_bcm2835.h"
 	#include "source/bcm2835_spi.h"
 	#include "source/bcm2835_stream.h"
+#elif defined(ESP_PLATFORM)
+  #include "source/esp32_stream.h"
 #endif
 
 #include "TMC_platforms.h"
